@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\.."
+		},
+		{
+			"name": "misinformation-app",
+			"path": "..\\..\\..\\misinformation-app"
+		}
+	],
+	"settings": {}
+}
