@@ -1,26 +1,110 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8" />
-  <title>Ionic App</title>
-
-  <base href="/" />
-
-  <meta name="color-scheme" content="light dark" />
-  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <meta name="format-detection" content="telephone=no" />
-  <meta name="msapplication-tap-highlight" content="no" />
-
-  <link rel="icon" type="image/png" href="assets/icon/favicon.png" />
-
-  <!-- add to homescreen for ios -->
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card</title>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+  <style>
+    :root {
+      --ion-safe-area-top: 20px;
+      --ion-safe-area-bottom: 22px;
+    }
+  </style>
 </head>
-
 <body>
-  <app-root></app-root>
-</body>
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Informed+
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
 
+<ion-content [fullscreen]="true">
+  <ion-virtual-scroll [items]="items" approxItemHeight="10000px"></ion-virtual-scroll>
+    <ion-header collapse="condense">
+      <ion-toolbar>
+        <br>
+        <ion-title size="large">Celebs & Coronavirus</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+
+    <ion-card>
+      <ion-card-header color="primary">
+        <ion-card-title>Celebs & Coronavirus</ion-card-title>
+        <ion-card-subtitle>Have your favorite celebrities been SURE or SLIPPING when it comes to coronavirus?</ion-card-subtitle>
+      </ion-card-header>
+      <br>
+      <ion-card-content>SURE: Rihanna! Rihanna's foundation donated over 5 million dollars to COVID-19 relief.</ion-card-content>
+      <img src='app/tab1/rihanna.jpg' alt="Image Not Found" width = '300px' height = 'auto'>
+      <br>
+      <ion-card-content>SLIPPING: Madonna! Madonna has shared misinformation about the coronavirus vaccine on Instagram.</ion-card-content>
+      <img src='app/tab1/madonna.jpg' alt="Image Not Found" width = '300px' height = 'auto'>
+      <br>
+      <ion-card-content>This count is updated every day! Check back in later to see how more of your favorite celebrities are handling coronavirus.</ion-card-content>
+
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header color="secondary">
+        <ion-card-title>The Facts on Misinformation</ion-card-title>
+        <ion-car-subtitle>What is misinformation, and why is it a problem now?</ion-car-subtitle>
+      </ion-card-header>
+      <br>
+      <ion-card-content>According to a study done by the CIGI (Center for International Governance Innovation), 86% of people have reported falling for “fake news.” While this would be worrying under any circumstances, it is especially alarming now - during the COVID-19 pandemic. Over 125 million people worldwide have caught the novel SARS-Cov-2, commonly referred to as the coronavirus, since it originated late in 2019. With false claims spreading nearly as rapidly as the virus itself, getting control of misinformation could be the key to getting control of COVID-19. The coronavirus misinformation crisis originated in January and February of 2020, as COVID-19 was becoming a global concern. Unlike the anti-vaxx movement, coronavirus misinformation is not a cohesive group, instead coming from a wide variety of sources, many much closer to home than we would like to think. Misinformation has a huge effect on coronavirus regulation compliance, leading thousands to forego masks and vaccinations. As one can imagine, this has very dangerous health consequences, especially for a virus as contagious as COVID-19. In addition to health dangers, the coronavirus pandemic has taken a vast economic toll on both governments and individuals, which is exacerbated as misinformation prolongs the pandemic. Public media illiteracy is not an individual fault, it is a societal problem that education can change. Luckily, there are many strategies that you as an individual can take to recognize and stop the spread of misinformation in our own community. Although many teens think they know the facts about the coronavirus, misinformation both online and offline is influencing teens to engage in hazardous behaviors; therefore, we as a town need to take it upon ourselves to educate and inform teenagers about the dangers of misinformation in order to finally control the COVID-19 pandemic. - Excerpt from my Capstone Research Paper</ion-card-content>
+      <br>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header color="tertiary">
+        <ion-card-title>Check Yourself</ion-card-title>
+        <ion-car-subtitle>Could you accidentally be spreading misinformation?</ion-car-subtitle>
+      </ion-card-header>
+      <br>
+      <ion-card-content>Ask yourself the SAFE questions before sharing an article or video:</ion-card-content>
+      <ion-card-content>Sources: Is your source official and not satirical?</ion-card-content>
+      <ion-card-content>Author: Is an author listed for the piece? If not, why wouldn't someone want to be associated with it?</ion-card-content>
+      <ion-card-content>Factual: Does the content contradict previous articles you have read on the topic?</ion-card-content>
+      <ion-card-content>Evidence: Does the article give evidence supporting their claim?</ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header color="primary">
+        <ion-card-title>Do Your Part!</ion-card-title>
+      </ion-card-header>
+      <br>
+      <ion-card-content>Good news - just by reading this, you have already begun to help stop misinformation. If you avoid spreading misinformation yourself, and call it out when you see it, half the battle is already done! Here are some more easy steps you can take in your everyday life to stop misinformation spread.</ion-card-content>
+      <ion-card-content>1) Use the SAFE method to check your sources before you share.</ion-card-content>
+      <ion-card-content>2) Talk - politely - to friends and relatives who are hestiant to get the vaccine, and show them the facts on why it is safe (you can use the Conversations on Vaccines guide in the resources section).</ion-card-content>
+      <ion-card-content>3) Donate to Poynter (https://www.poynter.org/support/), a fact-checking organization that has been working tirelessly to help people know what is true and false on social media.</ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header color="secondary">
+        <ion-card-title>Resources & Guides</ion-card-title>
+      </ion-card-header>
+      <br>
+      <ion-card-content>Feel free to print, share, or screenshot these guides to help remember the best ways to stop misinformation spread!</ion-card-content>
+      <a href="app/tab1/infographic1.jpg" download>Download Here</a>
+      <img src = 'app/tab1/infographic1.jpg'>
+      <a href="app/tab1/infographic2.jpg" download>Download Here</a>
+      <img src = 'app/tab1/infographic2.jpg' width = '200px' height = 'auto'>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>test</ion-card-title>
+      </ion-card-header>
+      <ion-content></ion-content>
+    </ion-card>
+
+    <app-explore-container name="app-explore-container"></app-explore-container>
+  </ion-virtual-scroll>
+  </ion-content>
+</body>
 </html>
